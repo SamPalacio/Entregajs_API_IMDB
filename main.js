@@ -62,13 +62,13 @@ function fillCard(response){
                                 <h5 class="card-title">${response.d[i].l}</h5>
                                 <p class="card-text">${response.d[i].y? response.d[i].y : "sin fecha"}</p>
                                 <p class="card-text">${response.d[i].s}</p>
-                                <button class="synopsis btn bg-success text-white">Ver Detalles</button>
+                                <button class="synopsis btn bg-success text-white">Ver resumen</button>
                             </div>
                         </div>
 
                         <div class="details hide ">
                             <div class="card-body reading">
-                                <h5 class="card-title">Sinopsis</h5>
+                                <h5 class="card-title">Resumen</h5>
                                 <div class="sinopsis">
 
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
@@ -99,7 +99,7 @@ function  updateDetails(response,target){
 
     const  display=   target.closest('.generalInfo').nextElementSibling;
     const display_text=display.querySelector('.card-text');
-    display_text.innerHTML=response[0]? response[0].text: "No se encontró sinopsis"
+    display_text.innerHTML=response[0]? response[0].text: "No se encontró resumen"
     showSynopsis(target.closest('.generalInfo'));
     target.classList.remove('synopsis');
     target.classList.add('show');
